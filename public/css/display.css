@@ -1,3 +1,18 @@
+function setTransformScale(scaleFactor) {
+    if(!scaleFactor) scaleFactor = 0.5;
+
+    let height = $(window).height()*(1/scaleFactor);
+    let width = $(window).width()*(1/scaleFactor);
+
+    $(".body-container").css({
+        width: width+"px",
+        height: height+"px",
+        transform: `scale(${scaleFactor})`
+    });
+};
+
+
+
 /* lato-regular - latin */
 @font-face {
   font-family: 'Lato';
@@ -21,7 +36,6 @@
 
 html {
   font-size: 32px;
-  transform: scale(0.5)
 }
 
 body {
