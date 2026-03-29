@@ -3,7 +3,7 @@
 class Device < ActiveRecord::Base
   SUPPORTED_MODELS = {
     "visionect_13" => {name: "Visionect Place & Play 13\"", template: "thirteen", width: 1200, height: 1600},
-    "boox_mira_pro" => {name: "Boox Mira Pro 25.3\"", template: "mira", width: 1800, height: 3200},
+    "boox_mira_pro" => {name: "Boox Mira Pro 25.3\"", template: "mira", width: 1668, height: 2388},
     "trmnl_og" => {name: "TRMNL (OG)", template: "trmnl", width: 480, height: 800}
   }.freeze
 
