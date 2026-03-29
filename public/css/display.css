@@ -1,5 +1,5 @@
 function setTransformScale(scaleFactor) {
-    if(!scaleFactor) scaleFactor = 1;
+    if(!scaleFactor) scaleFactor = 0.1;
 
     let height = $(window).height()*(1/scaleFactor);
     let width = $(window).width()*(1/scaleFactor);
