@@ -21,6 +21,7 @@
 
 html {
   font-size: 32px;
+  transform: scale(0.5)
 }
 
 body {
