@@ -33,20 +33,6 @@
   </head>
 
   <body>
-<script>
-function setTransformScale(scaleFactor) {
-    if(!scaleFactor) scaleFactor = 0.7;
-
-    let height = $(window).height()*(1/scaleFactor);
-    let width = $(window).width()*(1/scaleFactor);
-
-    $(".body-container").css({
-        width: width+"px",
-        height: height+"px",
-        transform: `scale(${scaleFactor})`
-    });
-};
-</script>
     <%= yield %>
   </body>
 </html>
