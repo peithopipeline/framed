@@ -65,7 +65,7 @@ class HomeAssistantApi
 
   def top_right
     data
-      .select { it[:entity_id].start_with?("sensor.timeframe_top_right") && it[:state].present? }
+      .select { it[:entity_id].include?("framedright") && it[:state].present? }
       .filter_map do
         parts = it[:state].split(",").map(&:strip)
         next if parts.length < 2
@@ -76,7 +76,7 @@ class HomeAssistantApi
 
   def top_left
     data
-      .select { it[:entity_id].start_with?("binary_sensor.framedleft_") && it[:state].present? }
+      .select { it[:entity_id].include?("framedleft") && it[:state].present? }
       .filter_map do
         parts = it[:state].split(",").map(&:strip)
         next if parts.length < 2
