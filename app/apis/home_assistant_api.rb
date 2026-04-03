@@ -76,7 +76,7 @@ class HomeAssistantApi
 
   def top_left
     data
-      .select { it[:entity_id].start_with?("sensor.timeframe_top_left") && it[:state].present? }
+      .select { it[:entity_id].start_with?("binary_sensor.framedleft") && it[:state].present? }
       .filter_map do
         parts = it[:state].split(",").map(&:strip)
         next if parts.length < 2
